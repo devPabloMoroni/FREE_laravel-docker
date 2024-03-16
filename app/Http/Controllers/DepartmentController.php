@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Department;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use DB;
 
 class DepartmentController extends Controller
 {
@@ -67,6 +68,13 @@ class DepartmentController extends Controller
      */
     public function destroy(Department $department)
     {
+        $employeeCount = DB::table('employees')->where('department_id', $department->id)->count();
+
+        // Verifica si el departamento tiene empleados
+        if ($employeeCount > 0) {
+            // Si tiene empleados, muestra un mensaje de error
+            return redirect()->back()->with('error', 'The department has employees. You cannot delete it.');
+        }
         $department->delete();
         return redirect('departments');
     }

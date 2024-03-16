@@ -1,74 +1,107 @@
-- Clonar el repositorio
-- npm install
-- composer install
-- Copiar env.dist a .env y modificar variables de enotrno .env
-- npm run dev
-
-
-
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<img src="https://chatkitty.com/assets/images/feature-cbeb779dc53b732d404ab5c3d4c54940.png" alt="Vue Logo"  width="200">
+<br>
+<img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" alt="Laravel Logo" width="300">
+<br>
+<img src="https://aulasoftwarelibre.github.io/taller-de-pas/Sesion-1/images/horizontal-logo-monochromatic-white.png" alt="Docker Logo" width="400">
+</div>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Descripcion del Proyecto
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Este repositorio contiene un CRUD básico desarrollado en Laravel, Vue.js y Docker, diseñado como parte de una prueba técnica. El proyecto proporciona una aplicación web para la gestión de datos mediante operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre una base de datos.
+#### Características principales
+- **Tecnologías utilizadas:** El proyecto se basa en el framework PHP Laravel para el backend, Vue.js para el frontend y Docker para la gestión del entorno de desarrollo.
+- **Operaciones CRUD:** Permite realizar operaciones de Crear, Leer, Actualizar y Eliminar sobre los datos almacenados en la base de datos.
+- **Visualización de datos:** Incluye una sección para visualizar gráficos de barras que proporcionan una representación visual de la información almacenada en la base de datos.
+- **Generación de reportes:** Dispone de una sección para obtener reportes con opciones para exportarlos en formatos Excel y PDF, imprimirlos, copiarlos al portapapeles, entre otros.
+- **Arquitectura MVC:** Utiliza el patrón de diseño Modelo-Vista-Controlador (MVC) para organizar y estructurar el código de la aplicación.
+- **Separación de responsabilidades:** Se hace uso de la separación de responsabilidades entre el backend (Laravel) y el frontend (Vue.js) para una mejor mantenibilidad y escalabilidad del proyecto.
+- **Contenedores Docker:** Se incluye una configuración de Docker para facilitar la instalación y ejecución del proyecto en diferentes entornos sin la necesidad de configuraciones adicionales.
 
-## Learning Laravel
+### Requerimientos
+El proyecto fue realizado usando las siguientes versiones:
+- PHP v8.1
+- Node.js v20
+- Composer v2.7
+- Docker v25
+- Docker-compose v2.24
+- GIT v2.44
+> [!TIP]
+> Para una mayor compatibilidad utilizar las mismas versiones antes detalladas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Instalación de paquetes necesarios
+1. Instalar PHP [-->Go to](https://www.php.net/manual/es/install.php)
+2. Instalar Node.js [-->Go to](https://nodejs.org/en/download)
+3. Instalar Composer [-->Go to](https://getcomposer.org/download/)
+4. Instalar Docker [-->Go to](https://docs.docker.com/engine/install/)
+5. Instalar Docker-compose [-->Go to](https://docs.docker.com/compose/install/)
+6. Instalar GIT [-->Go to](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Instalación del Repositorio
+1. Abrir una terminal y clonar el repositorio
+```git
+git clone git@github.com:devPabloMoroni/FREE_laravel-docker.git
+```
+> [!WARNING]
+> A partir de hace uno años no se permite clonar repositorios por HTTPS, si aparece algún problema con respecto a esto debes instalar los certificados SSH [Mirá como hacerlo!](https://docs.github.com/es/authentication/connecting-to-github-with-ssh/about-ssh)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. Copiar el archivo `.env.example` a `.env` y configurar las variables de entorno de la base de datos de la siguiente manera:
+```javascript
+DB_CONNECTION=mysql
+DB_HOST=DB
+DB_PORT=3306
+DB_DATABASE=laravuecompany
+DB_USERNAME=root
+DB_PASSWORD=
+```
+3. Abrir una terminal dentro del proyecto y ejecutar:
+```javascript
+npm i
+```
+4. Configuración de Dependencias con Composer
+```javascript
+composer install
+```
+5. Inicialización de Entorno
+```javascript
+docker-compose up -d
+```
+6. Verificar nombre del contenedor de la app
+```javascript
+docker ps
+```
+7. Entrar al contenedor de la app
+```javascript
+docker exec -it APP sh
+```
+8. Crear KEY para proyecto
+```javascript
+php artisan key:generate
+```
+> [!WARNING]
+> En el caso de que de algún error con el cache ejecutar `php artisan cache:clear`
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+9. Ejecutar migraciones
+```javascript
+php artisan migrate
+```
+10. Ejecutar Seeders
+```javascript
+php artisan migrate --seed
+```
+11. Salir del contenedor
+```javascript
+exit
+```
+12. Ejecutar npm desde el entorno local
+```javascript
+npm run dev
+```
+13. Acceder a la aplicacion desde tu navegador preferido
+```javascript
+http://localhost:8000/
+```
+14. Registrar tu usuario
+15. Empezar a utilizar!
