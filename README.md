@@ -80,6 +80,10 @@ npm i
 composer install
 ```
 7. Inicialización de Entorno
+Ejecutar
+```javascript
+docker-compose build --no-cache
+```
 ```javascript
 docker-compose up -d
 ```
