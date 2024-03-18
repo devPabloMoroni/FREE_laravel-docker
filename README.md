@@ -47,7 +47,11 @@ git clone git@github.com:devPabloMoroni/FREE_laravel-docker.git
 > [!WARNING]
 > A partir de hace uno años no se permite clonar repositorios por HTTPS, si aparece algún problema con respecto a esto debes instalar los certificados SSH [Mirá como hacerlo!](https://docs.github.com/es/authentication/connecting-to-github-with-ssh/about-ssh)
 
-2. Copiar el archivo `.env.example` a `.env` y configurar las variables de entorno de la base de datos de la siguiente manera:
+2. Copiar el archivo `.env.example` a `.env` 
+```javascript
+cp .env.example .env
+```
+y configurar las variables de entorno de la base de datos de la siguiente manera:
 ```javascript
 DB_CONNECTION=mysql
 DB_HOST=DB
