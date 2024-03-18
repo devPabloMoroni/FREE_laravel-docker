@@ -47,7 +47,11 @@ git clone git@github.com:devPabloMoroni/FREE_laravel-docker.git
 > [!WARNING]
 > A partir de hace uno años no se permite clonar repositorios por HTTPS, si aparece algún problema con respecto a esto debes instalar los certificados SSH [Mirá como hacerlo!](https://docs.github.com/es/authentication/connecting-to-github-with-ssh/about-ssh)
 
-2. Copiar el archivo `.env.example` a `.env` 
+2. Moverse a la carpeta
+```javascript
+cd FREE_laravel-docker
+```
+3. Copiar el archivo `.env.example` a `.env` 
 ```javascript
 cp .env.example .env
 ```
@@ -60,52 +64,59 @@ DB_DATABASE=laravuecompany
 DB_USERNAME=root
 DB_PASSWORD=
 ```
-3. Abrir una terminal dentro del proyecto y ejecutar:
+4. En el caso de usar nvm ejecutar:
+```javascript
+nvm install 20
+```
+```javascript
+nvm use 20
+```
+5. Abrir una terminal dentro del proyecto y ejecutar:
 ```javascript
 npm i
 ```
-4. Configuración de Dependencias con Composer
+6. Configuración de Dependencias con Composer
 ```javascript
 composer install
 ```
-5. Inicialización de Entorno
+7. Inicialización de Entorno
 ```javascript
 docker-compose up -d
 ```
-6. Verificar nombre del contenedor de la app
+8. Verificar nombre del contenedor de la app
 ```javascript
 docker ps
 ```
-7. Entrar al contenedor de la app
+9. Entrar al contenedor de la app
 ```javascript
 docker exec -it APP sh
 ```
-8. Crear KEY para proyecto
+10. Crear KEY para proyecto
 ```javascript
 php artisan key:generate
 ```
 > [!WARNING]
 > En el caso de que de algún error con el cache ejecutar `php artisan cache:clear`
 
-9. Ejecutar migraciones
+11. Ejecutar migraciones
 ```javascript
 php artisan migrate
 ```
-10. Ejecutar Seeders
+12. Ejecutar Seeders
 ```javascript
 php artisan migrate --seed
 ```
-11. Salir del contenedor
+13. Salir del contenedor
 ```javascript
 exit
 ```
-12. Ejecutar npm desde el entorno local
+14. Ejecutar npm desde el entorno local
 ```javascript
 npm run dev
 ```
-13. Acceder a la aplicacion desde tu navegador preferido
+15. Acceder a la aplicacion desde tu navegador preferido
 ```javascript
 http://localhost:8000/
 ```
-14. Registrar tu usuario
-15. Empezar a utilizar!
+16. Registrar tu usuario
+17. Empezar a utilizar!
