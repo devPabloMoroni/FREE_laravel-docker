@@ -64,14 +64,10 @@ DB_DATABASE=laravuecompany
 DB_USERNAME=root
 DB_PASSWORD=
 ```
-4. En el caso de usar nvm ejecutar:
-```javascript
-nvm install 20
-```
-```javascript
-nvm use 20
-```
-5. Abrir una terminal dentro del proyecto y ejecutar:
+4.
+> [!WARNING]
+> En el caso de usar nvm ejecutar `nvm install 20` y luego `nvm use 20`
+5. Ejecutar:
 ```javascript
 npm i
 ```
@@ -80,7 +76,6 @@ npm i
 composer install
 ```
 7. Inicialización de Entorno
-Ejecutar
 ```javascript
 docker-compose build --no-cache
 ```
